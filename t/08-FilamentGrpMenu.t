@@ -66,9 +66,9 @@ content : $("#menu-items").html()
 
 $expected = <<EOF;
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $expected
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;
@@ -127,9 +127,9 @@ backLink : false
 
 $expected = <<EOF;
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $expected
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;

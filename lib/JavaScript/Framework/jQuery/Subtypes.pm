@@ -17,7 +17,7 @@ use MooseX::Types::Moose qw( Int Str ArrayRef HashRef );
 use MooseX::Types::Structured qw( Dict );
 use MooseX::Types -declare => [ @type ];
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 subtype cssAsset,
     as Dict[

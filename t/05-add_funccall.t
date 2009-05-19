@@ -56,7 +56,7 @@ is($jquery->script_src_elements, $expected, 'output expected SCRIPT (with SRC at
 # add CDATA wrapper, since we want XHTML
 $expected = <<'EOF';
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $(document).ready(function (){
 $("#inputid").mcDropdown("#ulid");
 $("#content a").tooltip({
@@ -67,7 +67,7 @@ $("#content a").tooltip({
     fade: 250
 });
 });
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;
@@ -91,7 +91,7 @@ $jquery->add_func_calls(
 );
 $expected = <<'EOF';
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $(document).ready(function (){
 $("#input2id").mcDropdown("#ulid2");
 $("#SubContent td").tooltip({
@@ -102,7 +102,7 @@ $("#SubContent td").tooltip({
     fade: 250
 });
 });
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;
@@ -147,7 +147,7 @@ $jquery->construct_plugin(
 );
 $expected = <<'EOF';
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $(document).ready(function (){
 $("#content a").tooltip({
     track: true,
@@ -166,7 +166,7 @@ $("#SubContent td").tooltip({
 $("#input2id").mcDropdown("#ulid2");
 $("#ulid").supersubs().superfish();
 });
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;

@@ -62,9 +62,9 @@ $("#navbar").supersubs().superfish();
 
 $expected = <<EOF;
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $expected
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;
@@ -128,9 +128,9 @@ option1 : 42
 
 $expected = <<EOF;
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $expected
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;

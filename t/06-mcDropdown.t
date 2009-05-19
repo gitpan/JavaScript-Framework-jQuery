@@ -49,9 +49,9 @@ $("#inputid").mcDropdown("#ulid");
 # add CDATA wrapper, since we want XHTML
 $expected = <<EOF;
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $expected
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;
@@ -133,9 +133,9 @@ maxHeight : 24
 });|;
 $expected = <<EOF;
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $expected
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;

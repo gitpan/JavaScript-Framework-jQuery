@@ -24,11 +24,11 @@ isa_ok($jquery, $class);
 
 $expected =
 '<script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $(document).ready(function (){
 // comment
 });
-]]>
+//]]>
 </script>';
 $jquery->add_func_calls('// comment');
 is($jquery->document_ready, $expected, 'document_ready prints code added with add_func_calls meth');
@@ -101,7 +101,7 @@ is($jquery->script_src_elements, $expected, 'HERE output expected SCRIPT (with S
 # add CDATA wrapper, since we want XHTML
 $expected = <<'EOF';
 <script type="text/javascript">
-<![CDATA[
+//<![CDATA[
 $(document).ready(function (){
 $('.foobar').do_stuff();
 $("#inputid").mcDropdown("#ulid");
@@ -109,7 +109,7 @@ $("#divid1").superfish();
 $("#divid2").superfish();
 $("#divid3").superfish();
 });
-]]>
+//]]>
 </script>
 EOF
 chomp $expected;

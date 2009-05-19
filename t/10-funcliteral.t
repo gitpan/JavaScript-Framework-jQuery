@@ -92,10 +92,10 @@ $expected = '<link type="text/css" href="ui.all.css" rel="stylesheet" media="scr
 <link type="text/css" href="superfish.css" rel="stylesheet" media="all" />';
 is($jquery->link_elements, $expected, 'output expected LINK elements');
 
-$expected = '<script type="text/javascript" src="jquery.min.js" />
-<script type="text/javascript" src="jquery.mcdropdown.js" />
-<script type="text/javascript" src="jquery.bgiframe.js" />
-<script type="text/javascript" src="superfish.js" />';
+$expected = '<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.mcdropdown.js"></script>
+<script type="text/javascript" src="jquery.bgiframe.js"></script>
+<script type="text/javascript" src="superfish.js"></script>';
 is($jquery->script_src_elements, $expected, 'HERE output expected SCRIPT (with SRC attr) elements');
 
 # add CDATA wrapper, since we want XHTML
